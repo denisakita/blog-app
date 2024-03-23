@@ -1,13 +1,14 @@
 import './App.css';
 import {AboutPage, ArticlePage, ArticlesListPage, HomePage} from "./pages";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import NavBar from "./NavBar";
 
 
 function App() {
     return (
         <BrowserRouter>
             <div className="App">
-                <h1>My Awesome Blog</h1>
+                <NavBar/>
                 <div id="page-body">
                     <Routes>
                         <Route path="/" element={<HomePage/>}/>
