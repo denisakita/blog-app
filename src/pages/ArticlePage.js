@@ -1,5 +1,5 @@
 import {useParams} from 'react-router-dom';
-import articles from './article-content';
+import articles from '../mock/article-content';
 
 const ArticlePage = () => {
     const {articleId} = useParams();
