@@ -4,10 +4,13 @@ import {NotFoundPage} from "./index";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {AddCommentForm, CommentsList} from "../components";
+import useUser from "../hooks/useUser";
 
 const ArticlePage = () => {
     const [articleInfo, setArticleInfo] = useState({upvotes: 0, comments: []});
     const {articleId} = useParams();
+
+    const {user, isLoading} = useUser();
 
 
     useEffect(() => {
@@ -35,18 +38,23 @@ const ArticlePage = () => {
         <>
             <h1>{article.title}</h1>
             <div className="upvotes-section">
-                <button onClick={addUpVote}>UpVote</button>
+                {user
+                    ? <button onClick={addUpVote}>UpVote</button>
+                    : <button>Login to upvote</button>}
                 <p>This article has {articleInfo.upvotes} upvote(s)</p>
             </div>
 
             {article.content.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
             ))}
-            <AddCommentForm
-                articleName={articleId}
-                onArticleUpdated={updatedArticle => setArticleInfo(updatedArticle)}
-            />
+            {user
+                ? <AddCommentForm
+                    articleName={articleId}
+                    onArticleUpdated={updatedArticle => setArticleInfo(updatedArticle)}
+                />
 
+                : <button>Login to add a comment</button>
+            }
             <CommentsList comments={articleInfo.comments}/>
         </>
     );
