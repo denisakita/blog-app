@@ -1,5 +1,6 @@
-import ArticleList from "../components/ArticleList";
+
 import articles from "../mock/article-content";
+import {ArticleList} from "../components";
 
 const ArticlesListPage = () => {
     return (

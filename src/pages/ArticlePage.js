@@ -3,7 +3,7 @@ import articles from '../mock/article-content';
 import {NotFoundPage} from "./index";
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {CommentsList} from "../components";
+import {AddCommentForm, CommentsList} from "../components";
 
 const ArticlePage = () => {
     const [articleInfo, setArticleInfo] = useState({upvotes: 0, comments: []});
@@ -22,16 +22,31 @@ const ArticlePage = () => {
 
     const article = articles.find(article => article.name === articleId);
 
+    const addUpVote = async () => {
+        const response = await axios.put(`/api/articles/${articleId}/upvote`);
+        const updatedArticle = response.data;
+        setArticleInfo(updatedArticle);
+    }
+
     if (!article) {
         return <NotFoundPage/>
     }
     return (
         <>
             <h1>{article.title}</h1>
-            <p>This article has {articleInfo.upvotes} upvote(s)</p>
+            <div className="upvotes-section">
+                <button onClick={addUpVote}>UpVote</button>
+                <p>This article has {articleInfo.upvotes} upvote(s)</p>
+            </div>
+
             {article.content.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
             ))}
+            <AddCommentForm
+                articleName={articleId}
+                onArticleUpdated={updatedArticle => setArticleInfo(updatedArticle)}
+            />
+
             <CommentsList comments={articleInfo.comments}/>
         </>
     );

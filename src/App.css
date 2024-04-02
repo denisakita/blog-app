@@ -16,7 +16,7 @@ button {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
   background-color: var(--color-palette-primary);
-  color: var(--color-palette-secondary);
+  color: var(--color-palette-quaternary);
   border-radius: 8px;
   cursor: pointer;
 }
@@ -102,6 +102,7 @@ nav a:hover {
 #upvotes-section button, p {
   display: inline-block;
   margin-right: 16px;
+  margin-left: 5px;
 }
 
 .comment {
