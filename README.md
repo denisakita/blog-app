@@ -30,32 +30,32 @@ To get started with the project, follow these steps:
    ```
 
 2. **Install Dependencies**:
-    - Navigate to the project directory and install dependencies for both the front-end and back-end:
-      ```
-      cd blog-app
-      cd frontend && npm install
-      cd ../backend && npm install
-      ```
+   - Navigate to the project directory and install dependencies for both the front-end and back-end:
+     ```
+     cd blog-app
+     cd frontend && npm install
+     cd ../backend && npm install
+     ```
 
 3. **Set Up Firebase Authentication**:
-    - Follow the instructions provided by Firebase to set up authentication for your application. Once set up, make sure
-      to update the necessary configurations in your backend code.
+   - Follow the instructions provided by Firebase to set up authentication for your application. Once set up, make sure
+     to update the necessary configurations in your backend code.
 
 4. **Configure MongoDB**:
-    - Make sure you have MongoDB installed and running on your machine or use a cloud-based MongoDB service. Update the
-      connection string in the backend code to connect to your MongoDB instance.
+   - Make sure you have MongoDB installed and running on your machine or use a cloud-based MongoDB service. Update the
+     connection string in the backend code to connect to your MongoDB instance.
 
 5. **Start the Development Servers**:
-    - Start the front-end and back-end servers separately:
-      ```
-      cd frontend && npm start
-      ```
-      ```
-      cd ../backend && npm start
-      ```
+   - Start the front-end and back-end servers separately:
+     ```
+     cd frontend && npm start
+     ```
+     ```
+     cd ../backend && npm start
+     ```
 
 6. **Open the Application**:
-    - Once both servers are running, open your browser and navigate to `http://localhost:3000` to view the application.
+   - Once both servers are running, open your browser and navigate to `http://localhost:3000` to view the application.
 
 ## Deployment:
 
@@ -66,3 +66,15 @@ for deploying React and Node.js applications to set up your deployment environme
 ---
 
 Happy coding! 🚀
+
+1. **Home Page**:
+
+![Home Image](src/images/home.png)
+
+2. **Article View**:
+
+![Article Image](src/images/articles.png)
+
+3. **Article Details**:
+
+![Article Details Image](src/images/article-details.png)
