@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Blog App with React, Node.js, and AWS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the repository for the Blog App developed with React, Node.js, and deployed on AWS! This README will provide
+an overview of the technologies used in this application and how to get started with the project.
 
-## Available Scripts
+## Technologies Used:
 
-In the project directory, you can run:
+- **React**: Library for building dynamic UI components.
 
-### `npm start`
+- **Node.js**: avaScript runtime for server-side scripting and communication.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Express**: Framework for creating server-side applications and APIs, handling routing and HTTP requests.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **MongoDB**: NoSQL database for storing flexible JSON-like documents, offering scalability and performance.
 
-### `npm test`
+- **Firebase Authentication**: Service for secure user authentication, integrating seamlessly with Node.js.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Axios**: Library for making HTTP requests between front-end and back-end, simplifying data fetching.
 
-### `npm run build`
+- **Amazon Web Services (AWS)**: Cloud computing platform for hosting, storage, and computing, providing scalability,
+  reliability, and security.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To get started with the project, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the Repository**:
+   ```
+   git clone https://github.com/your-username/blog-app.git
+   ```
 
-### `npm run eject`
+2. **Install Dependencies**:
+   - Navigate to the project directory and install dependencies for both the front-end and back-end:
+     ```
+     cd blog-app
+     cd frontend && npm install
+     cd ../backend && npm install
+     ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Set Up Firebase Authentication**:
+   - Follow the instructions provided by Firebase to set up authentication for your application. Once set up, make sure
+     to update the necessary configurations in your backend code.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Configure MongoDB**:
+   - Make sure you have MongoDB installed and running on your machine or use a cloud-based MongoDB service. Update the
+     connection string in the backend code to connect to your MongoDB instance.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. **Start the Development Servers**:
+   - Start the front-end and back-end servers separately:
+     ```
+     cd frontend && npm start
+     ```
+     ```
+     cd ../backend && npm start
+     ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+6. **Open the Application**:
+   - Once both servers are running, open your browser and navigate to `http://localhost:3000` to view the application.
 
-## Learn More
+## Deployment:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The application can be deployed on AWS using services like EC2, S3, and Elastic Beanstalk. Follow the AWS documentation
+for deploying React and Node.js applications to set up your deployment environment.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Happy coding! 🚀
 
-### Analyzing the Bundle Size
+1. **Home Page**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Home Image](src/images/home.png)
 
-### Making a Progressive Web App
+2. **Article View**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![Article Image](src/images/articles.png)
 
-### Advanced Configuration
+3. **Article Details**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Article Details Image](src/images/article-details.png)

@@ -36,7 +36,7 @@ nav {
 
 nav ul {
   list-style-type: none;
-  margin: 0;
+  margin: 8px;
   padding: 0;
 }
 
@@ -84,6 +84,17 @@ nav a:hover {
   margin-bottom: 16px;
 }
 
+input, textarea {
+  display: block;
+  width: 300px;
+  padding: 8px;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  border: 2px var(--color-palette-secondary);
+  margin-bottom: 16px;
+}
+
 #add-comment-form input, textarea {
   display: block;
   width: 300px;
@@ -93,6 +104,7 @@ nav a:hover {
   font-size: 18px;
   border: 2px solid var(--color-palette-tertiary);
   margin-bottom: 16px;
+
 }
 
 #add-comment-form button {
@@ -108,4 +120,16 @@ nav a:hover {
 .comment {
   border-bottom: 2px solid var(--color-palette-tertiary);
   padding: 16px;
+}
+
+.error {
+  padding: 8px;
+  border-radius: 4px;
+  background-color: var(--color-palette-tertiary);
+}
+
+.nav-right {
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }
